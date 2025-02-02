@@ -5,8 +5,8 @@ import joblib
 from tensorflow.keras.models import load_model
 
 # Load the trained model and scaler
-model_path = 'model\classification_model.h5'
-scaler_path = 'model\scaler.pkl'
+model_path = 'model/classification_model.h5'
+scaler_path = 'model/scaler.pkl'
 model = load_model(model_path)
 scaler = joblib.load(scaler_path)
 
