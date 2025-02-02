@@ -5,8 +5,8 @@ import joblib
 from tensorflow.keras.models import load_model
 
 # Load the trained model and scaler
-model_path = './model/classification_model.h5'
-scaler_path = './model/scaler.pkl'
+model_path = 'model\classification_model.h5'
+scaler_path = 'model\scaler.pkl'
 model = load_model(model_path)
 scaler = joblib.load(scaler_path)
 
@@ -17,14 +17,12 @@ st.header("Project Objective")
 st.write("The goal of this project is to predict whether a customer will churn based on their demographic, account, and transaction data.")
 
 # Load and display dataset preview
-df = pd.read_csv('./data/processed_data.csv')
+df = pd.read_csv('data\Churn_Modelling.csv')
 st.subheader("Dataset Preview")
 st.dataframe(df.head())
 
 # Input form for user features
 st.subheader("Input Customer Features")
-customer_id = st.text_input("Customer ID")
-surname = st.text_input("Surname")
 credit_score = st.number_input("Credit Score", min_value=300, max_value=850, value=600)
 geography = st.selectbox("Geography", ["France", "Germany", "Spain"])
 gender = st.selectbox("Gender", ["Male", "Female"])
