@@ -17,7 +17,7 @@ st.header("Project Objective")
 st.write("The goal of this project is to predict whether a customer will churn based on their demographic, account, and transaction data.")
 
 # Load and display dataset preview
-df = pd.read_csv('data\Churn_Modelling.csv')
+df = pd.read_csv('data/Churn_Modelling.csv')
 st.subheader("Dataset Preview")
 st.dataframe(df.head())
 
